@@ -31,6 +31,7 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.androidx.navigation.compose)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -39,9 +40,10 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+
+            implementation(libs.compose.navigation)
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
-            implementation(libs.androidx.navigation.compose)
 
             implementation(project(":fluid-lib"))
         }
