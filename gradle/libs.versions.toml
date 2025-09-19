@@ -1,5 +1,5 @@
 [versions]
-agp = "8.11.1"
+agp = "8.12.3"
 android-compileSdk = "36"
 android-minSdk = "24"
 android-targetSdk = "36"
@@ -8,17 +8,20 @@ androidx-appcompat = "1.7.1"
 androidx-core = "1.17.0"
 androidx-espresso = "3.7.0"
 androidx-lifecycle = "2.9.4"
-androidx-navigation = "2.9.4"
+androidx-navigation = "2.9.5"
 androidx-testExt = "1.3.0"
 composeMultiplatform = "1.9.0"
 compose-navigation = "2.9.0"
+graphicsCore = "1.0.3"
 junit = "4.13.2"
-kotlin = "2.2.10"
-kotlinStdlib = "2.2.10"
+kotlin = "2.2.20"
+kotlinStdlib = "2.2.20"
 runner = "1.7.0"
 core = "1.7.0"
+skiko = "0.9.24"
 
 [libraries]
+androidx-graphics-core = { module = "androidx.graphics:graphics-core", version.ref = "graphicsCore" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 junit = { module = "junit:junit", version.ref = "junit" }
@@ -34,6 +37,7 @@ compose-navigation = { module = "org.jetbrains.androidx.navigation:navigation-co
 kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlinStdlib" }
 androidx-runner = { group = "androidx.test", name = "runner", version.ref = "runner" }
 androidx-core = { group = "androidx.test", name = "core", version.ref = "core" }
+skiko = { group = "org.jetbrains.skiko", name = "skiko", version.ref = "skiko" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

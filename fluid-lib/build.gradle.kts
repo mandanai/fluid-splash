@@ -24,7 +24,11 @@ kotlin {
         }.configure {
             instrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         }
+
+        experimentalProperties["android.experimental.kmp.enableAndroidResources"] = true
     }
+
+    jvm("desktop")
 
     // For iOS targets, this is also where you should
     // configure native binary output. For more information, see:
@@ -85,9 +89,7 @@ kotlin {
 
         androidMain {
             dependencies {
-                // Add Android-specific dependencies here. Note that this source set depends on
-                // commonMain by default and will correctly pull the Android artifacts of any KMP
-                // dependencies declared in commonMain.
+                implementation(libs.androidx.graphics.core)
             }
         }
 
@@ -108,6 +110,16 @@ kotlin {
                 // KMP dependencies declared in commonMain.
             }
         }
-    }
 
+        val desktopMain by getting {
+            dependencies {
+                implementation(compose.desktop.currentOs)
+            }
+        }
+    }
+}
+
+compose.resources {
+    generateResClass = always
+    packageOfResClass = "dev.chayaphon.lib.fluid.resources"
 }

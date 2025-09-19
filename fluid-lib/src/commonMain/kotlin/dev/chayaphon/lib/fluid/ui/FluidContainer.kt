@@ -23,13 +23,14 @@ fun FluidContainer(
     val animationValues = remember(time) { calculateFluidAnimationValues(time) }
 
     Box(
-        modifier = modifier
+        modifier = Modifier
             .fillMaxSize()
             .navigationBarsPadding()
-            .background(Color.Black),
+            .background(Color.Black)
+            .then(modifier),
         contentAlignment = Alignment.Center
     ) {
-        FluidSplashBackground(
+        FluidBackground(
             background = background,
             animationValues = animationValues
         )

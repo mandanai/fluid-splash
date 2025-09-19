@@ -11,7 +11,7 @@ import dev.chayaphon.fluid.fluidsplash.presentation.CoolScreen
 import dev.chayaphon.fluid.fluidsplash.presentation.LoadingScreen
 import dev.chayaphon.fluid.fluidsplash.presentation.MetaballScreen
 import dev.chayaphon.fluid.fluidsplash.presentation.Screen
-import dev.chayaphon.fluid.fluidsplash.presentation.ShowcaseScreen
+import dev.chayaphon.fluid.fluidsplash.presentation.IntroduceScreen
 import dev.chayaphon.fluid.fluidsplash.presentation.StartPage
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -34,7 +34,7 @@ fun App() {
                 MetaballScreen()
             }
             composable(Screen.Showcase.route) {
-                ShowcaseScreen()
+                IntroduceScreen()
             }
         }
     }

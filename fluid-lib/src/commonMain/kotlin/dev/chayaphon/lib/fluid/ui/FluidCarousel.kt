@@ -225,7 +225,7 @@ fun FluidClipBox(
 
 @Composable
 private fun BubbleCanvas(controller: FluidAnimationController) {
-    // By reading the 'version' state here, we subscribe this composable to its changes.
+    // By reading the 'version' state here, subscribe this composable to its changes.
     val version = controller.version
 
     // This Canvas will now be recomposed (and redrawn) every time 'version' changes.

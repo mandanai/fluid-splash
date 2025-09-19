@@ -14,7 +14,7 @@ import org.jetbrains.compose.resources.ExperimentalResourceApi
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
-fun FluidSplashBackground(
+fun FluidBackground(
     background: Background,
     animationValues: FluidAnimationValues,
     modifier: Modifier = Modifier

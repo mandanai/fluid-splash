@@ -12,6 +12,7 @@ object FluidResources {
         val RED = Res.drawable.bg_red
         val YELLOW = Res.drawable.bg_yellow
         val BLUE = Res.drawable.bg_blue
+        val PURPLE = Res.drawable.bg_purple
     }
 
     // Illustration images
@@ -19,6 +20,7 @@ object FluidResources {
         val RED = Res.drawable.illustration_red
         val YELLOW = Res.drawable.illustration_yellow
         val BLUE = Res.drawable.illustration_blue
+        val PURPLE = Res.drawable.illustration_purple
     }
 
     // Fonts

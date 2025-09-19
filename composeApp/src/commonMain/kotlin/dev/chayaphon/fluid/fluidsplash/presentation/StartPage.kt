@@ -34,7 +34,7 @@ fun StartPage(navController: NavController) {
             modifier = Modifier.fillMaxWidth(),
             onClick = { navController.navigate(Screen.Showcase.route) }
         ) {
-            Text("Showcase Screen")
+            Text("Introduce Screen")
         }
         Button(
             modifier = Modifier.fillMaxWidth(),
