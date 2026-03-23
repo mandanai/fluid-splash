@@ -2,6 +2,11 @@
 
 A Kotlin Multiplatform library for creating beautiful fluid and metaball animations in Compose Multiplatform.
 
+<video controls width="50%">
+    <source src="https://github.com/user-attachments/assets/c20e9336-2627-4e06-b5e8-6509a315f7fb" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
 ## ✨ Features
 
 - **AnimatedFluidBackground**: A dynamic, flowing background with customizable colors.
