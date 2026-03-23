@@ -1,15 +1,140 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
+# Fluid Splash 🌊
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-    - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-    - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-      For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-      the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-      Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-      folder is the appropriate location.
+A Kotlin Multiplatform library for creating beautiful fluid and metaball animations in Compose Multiplatform.
 
-* [/iosApp](./iosApp/iosApp) contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+## ✨ Features
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+- **AnimatedFluidBackground**: A dynamic, flowing background with customizable colors.
+- **MetaballBackground**: Smooth, organic-looking metaball animations.
+- **FluidCarousel**: An interactive carousel component with fluid transition effects.
+- **FluidContainer & FluidCard**: Containers and cards with fluid effects.
+- **LiquidFillAnimation**: Progress-style animations with a liquid filling effect.
+
+## 🚀 Getting Started
+
+This project is a Kotlin Multiplatform project targeting **Android** and **iOS**.
+
+### Prerequisites
+
+- [JDK 17+](https://adoptium.net/)
+- [Android Studio](https://developer.android.com/studio) or [IntelliJ IDEA](https://www.jetbrains.com/idea/)
+- [Xcode](https://developer.apple.com/xcode/) (for iOS development)
+
+### 📂 Project Structure
+
+- `composeApp`: A sample application demonstrating the usage of the library.
+- `fluid-lib`: The core library containing all fluid and metaball components.
+
+## 🛠 Usage
+
+### AnimatedFluidBackground
+
+```kotlin
+Box(modifier = Modifier.fillMaxSize()) {
+    AnimatedFluidBackground(
+        modifier = Modifier.fillMaxSize(),
+        primaryColor = Color(0xFF673AB7),
+        secondaryColor = Color(0xFFFFB727)
+    )
+    // Your content here
+}
+```
+
+### MetaballBackground
+
+```kotlin
+Box(modifier = Modifier.fillMaxSize()) {
+    MetaballBackground()
+    // Your content here
+}
+```
+
+### LiquidFillAnimation
+
+```kotlin
+var progress by remember { mutableStateOf(0.5f) } // 0.0 to 1.0
+
+LiquidFillAnimation(
+    progress = progress,
+    modifier = Modifier.size(200.dp),
+    color = Color(0xFF4FC3F7),
+    waveHeight = 20f
+)
+```
+
+### FluidCard & FluidCardCustom
+
+`FluidCard` provides a pre-defined layout for a card with fluid background:
+
+```kotlin
+val config = FluidGraphicConfig(
+    background = Background.BackgroundColor(Color(0xFF673AB7)),
+    illustration = painterResource(Res.drawable.my_illustration),
+    indicatorColor = Color.White
+)
+
+FluidCard(
+    config = config,
+    title = "Hello Fluid",
+    subtitle = "This is a fluid card"
+)
+```
+
+`FluidCardCustom` allows you to define your own content inside a fluid container:
+
+```kotlin
+FluidCardCustom(
+    background = Background.BackgroundColor(Color(0xFF673AB7))
+) {
+    // Your custom layout here
+    Column {
+        Text("Custom Title", color = Color.White)
+        Button(onClick = { /* ... */ }) {
+            Text("Action")
+        }
+    }
+}
+```
+
+### FluidCarousel
+
+`FluidCarousel` is an interactive carousel component that provides smooth fluid transitions between pages. It's often used with `FluidCardCustom`:
+
+```kotlin
+val pages = listOf<@Composable () -> Unit>(
+    {
+        FluidCardCustom(background = Background.BackgroundColor(Color(0xFF673AB7))) {
+            Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
+                Text("Page 1", color = Color.White)
+            }
+        }
+    },
+    {
+        FluidCardCustom(background = Background.BackgroundColor(Color(0xFFFFB727))) {
+            Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
+                Text("Page 2", color = Color.White)
+            }
+        }
+    }
+)
+
+FluidCarousel(
+    children = pages,
+    enableBubble = true, // Optional: Enable bubble effect during transitions
+    modifier = Modifier.fillMaxSize()
+)
+```
+
+## 📱 Running the Sample App
+
+### Android
+1. Open the project in Android Studio.
+2. Select `composeApp` in the run configuration.
+3. Choose an Android emulator or device and click **Run**.
+
+### iOS
+1. Open the `iosApp/iosApp.xcworkspace` in Xcode OR run from Android Studio/IntelliJ with the Kotlin Multiplatform Mobile plugin.
+2. Select the target device/simulator and click **Run**.
+
+## 📖 Learn More
+Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html) and [Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/).
