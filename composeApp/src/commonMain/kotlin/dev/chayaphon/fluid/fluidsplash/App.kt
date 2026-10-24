@@ -13,7 +13,7 @@ import dev.chayaphon.fluid.fluidsplash.presentation.MetaballScreen
 import dev.chayaphon.fluid.fluidsplash.presentation.Screen
 import dev.chayaphon.fluid.fluidsplash.presentation.IntroduceScreen
 import dev.chayaphon.fluid.fluidsplash.presentation.StartPage
-import org.jetbrains.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
 @Preview

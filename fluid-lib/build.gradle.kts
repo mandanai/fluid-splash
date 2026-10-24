@@ -11,7 +11,7 @@ kotlin {
     // Target declarations - add or remove as needed below. These define
     // which platforms this KMP module supports.
     // See: https://kotlinlang.org/docs/multiplatform-discover-project.html#targets
-    androidLibrary {
+    android {
         namespace = "dev.chayaphon.lib.fluid"
         compileSdk = libs.versions.android.compileSdk.get().toInt()
         minSdk = libs.versions.android.minSdk.get().toInt()
@@ -25,7 +25,9 @@ kotlin {
             instrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         }
 
-        experimentalProperties["android.experimental.kmp.enableAndroidResources"] = true
+        androidResources {
+            enable = true
+        }
     }
 
     jvm("desktop")
@@ -38,12 +40,6 @@ kotlin {
     // project can be found here:
     // https://developer.android.com/kotlin/multiplatform/migrate
     val xcfName = "fluid-libKit"
-
-    iosX64 {
-        binaries.framework {
-            baseName = xcfName
-        }
-    }
 
     iosArm64 {
         binaries.framework {
@@ -68,16 +64,16 @@ kotlin {
                 implementation(libs.kotlin.stdlib)
 
                 // Compose dependencies
-                implementation(compose.runtime)
-                implementation(compose.foundation)
-                implementation(compose.material3)
-                implementation(compose.ui)
-                implementation(compose.components.resources)
-                implementation(compose.components.uiToolingPreview)
+                implementation(libs.compose.runtime)
+                implementation(libs.compose.foundation)
+                implementation(libs.compose.material3)
+                implementation(libs.compose.ui)
+                implementation(libs.compose.components.resources)
+                implementation(libs.compose.ui.tooling.preview)
 
                 // Animation dependencies
-                implementation(compose.animation)
-                implementation(compose.animationGraphics)
+                implementation(libs.compose.animation)
+                implementation(libs.compose.animation.graphics)
             }
         }
 

@@ -1,24 +1,25 @@
 [versions]
-agp = "8.12.3"
-android-compileSdk = "36"
+agp = "9.1.1"
+android-compileSdk = "37"
 android-minSdk = "24"
 android-targetSdk = "36"
 androidx-activity = "1.13.0"
-androidx-appcompat = "1.7.1"
-androidx-core = "1.18.0"
+androidx-appcompat = "1.8.0"
+androidx-core = "1.19.1"
 androidx-espresso = "3.7.0"
-androidx-lifecycle = "2.10.0"
-androidx-navigation = "2.9.7"
+androidx-lifecycle = "2.11.0"
+androidx-navigation = "2.10.2"
 androidx-testExt = "1.3.0"
-composeMultiplatform = "1.10.3"
-compose-navigation = "2.9.2"
+composeMultiplatform = "1.12.2"
+composeMaterial3 = "1.9.0"
+compose-navigation = "2.10.0"
 graphicsCore = "1.0.4"
 junit = "4.13.2"
-kotlin = "2.3.20"
-kotlinStdlib = "2.3.20"
+kotlin = "2.4.21"
+kotlinStdlib = "2.4.10"
 runner = "1.7.0"
 core = "1.7.0"
-skiko = "0.144.4"
+skiko = "0.156.0"
 
 [libraries]
 androidx-graphics-core = { module = "androidx.graphics:graphics-core", version.ref = "graphicsCore" }
@@ -34,6 +35,15 @@ androidx-lifecycle-viewmodelCompose = { module = "org.jetbrains.androidx.lifecyc
 androidx-lifecycle-runtimeCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "androidx-navigation" }
 compose-navigation = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "compose-navigation" }
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "composeMultiplatform" }
+compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "composeMultiplatform" }
+compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "composeMaterial3" }
+compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "composeMultiplatform" }
+compose-ui-tooling = { module = "org.jetbrains.compose.ui:ui-tooling", version.ref = "composeMultiplatform" }
+compose-ui-tooling-preview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "composeMultiplatform" }
+compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "composeMultiplatform" }
+compose-animation = { module = "org.jetbrains.compose.animation:animation", version.ref = "composeMultiplatform" }
+compose-animation-graphics = { module = "org.jetbrains.compose.animation:animation-graphics", version.ref = "composeMultiplatform" }
 kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlinStdlib" }
 androidx-runner = { group = "androidx.test", name = "runner", version.ref = "runner" }
 androidx-core = { group = "androidx.test", name = "core", version.ref = "core" }
