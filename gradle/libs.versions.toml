@@ -16,6 +16,7 @@ compose-navigation = "2.10.0"
 graphicsCore = "1.0.4"
 junit = "4.13.2"
 kotlin = "2.4.21"
+kotlinx-coroutines = "1.9.0"
 kotlinStdlib = "2.4.10"
 runner = "1.7.0"
 core = "1.7.0"
@@ -25,6 +26,7 @@ skiko = "0.156.0"
 androidx-graphics-core = { module = "androidx.graphics:graphics-core", version.ref = "graphicsCore" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
 junit = { module = "junit:junit", version.ref = "junit" }
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-core" }
 androidx-testExt-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-testExt" }
