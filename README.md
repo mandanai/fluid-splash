@@ -27,7 +27,8 @@ This project is a Kotlin Multiplatform project targeting **Android** and **iOS**
 
 ### 📂 Project Structure
 
-- `composeApp`: A sample application demonstrating the usage of the library.
+- `androidApp`: The Android application that launches the sample.
+- `composeApp`: The shared sample UI demonstrating the usage of the library (Android and iOS).
 - `fluid-lib`: The core library containing all fluid and metaball components.
 
 ## 🛠 Usage
@@ -134,12 +135,14 @@ FluidCarousel(
 
 ### Android
 1. Open the project in Android Studio.
-2. Select `composeApp` in the run configuration.
+2. Select `androidApp` in the run configuration.
 3. Choose an Android emulator or device and click **Run**.
 
 ### iOS
-1. Open the `iosApp/iosApp.xcworkspace` in Xcode OR run from Android Studio/IntelliJ with the Kotlin Multiplatform Mobile plugin.
+1. Open `iosApp/iosApp.xcodeproj` in Xcode OR run from Android Studio/IntelliJ with the Kotlin Multiplatform Mobile plugin.
 2. Select the target device/simulator and click **Run**.
+
+> `iosX64` (the Intel Mac iOS Simulator) is not supported: Compose Multiplatform 1.12 no longer publishes artifacts for it. Use a physical device or an Apple Silicon simulator.
 
 ## 📖 Learn More
 Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html) and [Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/).

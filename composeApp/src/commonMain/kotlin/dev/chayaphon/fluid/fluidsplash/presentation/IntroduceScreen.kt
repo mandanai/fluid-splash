@@ -21,7 +21,7 @@ import dev.chayaphon.lib.fluid.ui.FluidCarousel
 import dev.chayaphon.lib.fluid.ui.LocalCarouselInfo
 import dev.chayaphon.lib.fluid.ui.SliderIndicators
 import org.jetbrains.compose.resources.ExperimentalResourceApi
-import org.jetbrains.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.Preview
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
