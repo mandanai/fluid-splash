@@ -1,4 +1,4 @@
-package dev.chayaphon.fluid.fluidsplash.model
+package dev.chayaphon.fluid.fluidsplash.presentation.resources
 
 import fluidsplash.composeapp.generated.resources.*
 

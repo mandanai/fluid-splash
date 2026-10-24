@@ -1,4 +1,4 @@
-package dev.chayaphon.fluid.fluidsplash.presentation
+package dev.chayaphon.fluid.fluidsplash.presentation.metaball
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -12,25 +12,15 @@ import androidx.compose.ui.unit.sp
 import dev.chayaphon.lib.fluid.ui.MetaballBackground
 
 @Composable
-fun MetaballScreen() {
-    val mySunsetPalette = listOf(
-        Color(0xfff7b267),
-        Color(0xfff79d65),
-        Color(0xfff4845f),
-        Color(0xfff27059),
-        Color(0xfff25c54)
-    )
-
+fun MetaballScreen(modifier: Modifier = Modifier) {
     Box(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .background(Color.DarkGray),
         contentAlignment = Alignment.Center
     ) {
-        // Call the composable to display the metaball animation.
         MetaballBackground()
 
-        // Other content on top.
         Text(
             text = "Metaballs!",
             color = Color.White,
